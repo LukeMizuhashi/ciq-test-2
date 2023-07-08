@@ -14,6 +14,11 @@ Run `./setup.sh` to install Golang dependencies. The SqlLite3 driver takes a min
 
 Add (or edit) an object declaration in `queries.json`. See the content of `queries.json` for a few examples.
 
+## How to update the database
+
+1. Put all the data you want to be in the database in `data.csv` following the format from the interview's original instructions.
+2. Then, run `$ go run createDb.go`.
+
 ## Future work
 
  * Update `main.go` to handle query results that have other types, such as strings.

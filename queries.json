@@ -10,10 +10,6 @@
 	{
 		"label": "Number of uploads by jeff22 on April 15th, 2020: %d\n",
 		"query": "SELECT COUNT(*) FROM log WHERE username = 'jeff22' AND operation = 'upload' AND timestamp >= '2020-04-15' AND timestamp < '2020-04-16'"
-	},
-	{
-		"label": "Number of uploads by jeff22 on April 15th, 2020: %d\n",
-		"query": "SELECT COUNT(*) FROM log WHERE username = 'jeff22' AND operation = 'upload' AND timestamp < '2020-04-16'"
 	}
 ]
 

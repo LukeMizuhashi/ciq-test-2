@@ -7,9 +7,12 @@ import (
 	"io"
 	"log"
 	"os"
+  "time"
 
 	_ "github.com/mattn/go-sqlite3"
 )
+
+var layout = "Mon Jan 02 15:04:05 MST 2006"
 
 func main() {
   fmt.Print("a");
@@ -46,8 +49,14 @@ func main() {
 			log.Fatal(err)
 		}
 
+    timestamp, err := time.Parse(layout, row[0])
+    if err != nil {
+      fmt.Println(err)
+      return
+    }
+
     fmt.Println(row)
-		_, err = db.Exec("INSERT INTO log (timestamp, username, operation, size) VALUES (?, ?, ?, ?)", row[0], row[1], row[2], row[3])
+		_, err = db.Exec("INSERT INTO log (timestamp, username, operation, size) VALUES (?, ?, ?, ?)", timestamp, row[1], row[2], row[3])
 		if err != nil {
 			log.Fatal(err)
 		}
