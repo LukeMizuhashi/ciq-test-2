@@ -4,7 +4,7 @@ Welcome to the future of running SQL against teeny tiny databases!
 
 ## Requirements
 
-Run `./setup.sh` to install Golang dependencies. The SqlLite3 driver takes a minute to install; it might look like it has hung, but--it probably hasn't.
+Run `$ ./setup.sh` to install Golang dependencies. The SqlLite3 driver takes a minute to install; it might look like it has hung, but--it probably hasn't.
 
 ## How to run SQL commands against the teeny tiny database
 
@@ -22,6 +22,8 @@ Add (or edit) an object declaration in `queries.json`. See the content of `queri
 ## Future work
 
  * Update `main.go` to handle query results that have other types, such as strings.
+ * Stick this all in Rocky Linux on Apptainer for mega brownie points
+ * Do it agian in Docker for shiggles
 
 ## Questions?
 
